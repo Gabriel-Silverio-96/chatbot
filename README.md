@@ -62,14 +62,26 @@ O chatbot não responde perguntas sobre outras linguagens de programação. Para
 2. Como criar uma classe em Java?
 3. Como escrever um loop `for` em C++?
 
-## LangSmith
+## Observabilidade com LangSmith
 
 Para habilitá-lo, defina as variáveis abaixo no `.env`:
 
 ```env
-LANGSMITH_TRACING=true
 LANGSMITH_API_KEY=sua-chave-langsmith
-LANGSMITH_AGENT_ID=chatbot-python
 ```
 
-Cada sessão cria o root span `python_chatbot_session`. Cada pergunta cria um span filho `chatbot_turn`; a cadeia registra os spans do prompt e a geração do modelo como `openai_generation`. Os eventos `chat_session_started`, `question_received`, `generation_completed`, `generation_failed` e `chat_session_ended` marcam o fluxo. O CLI aguarda até cinco segundos pelo envio de traces pendentes ao encerrar.
+## Rastreamento de execuções (Tracing)
+
+A imagem apresenta o rastreamento de uma sessão do chatbot, contendo três interações e suas respectivas etapas de execução.
+
+<img alt="Trace LangSmith" src="https://private-user-images.githubusercontent.com/53228013/695398875-4c2149c5-ca58-488c-9ebe-c4508a70fac8.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTM4Mjk0ODQsIm5iZiI6MTc5MzgyOTE4NCwicGF0aCI6Ii81MzIyODAxMy82OTUzOTg4NzUtNGMyMTQ5YzUtY2E1OC00ODhjLTllYmUtYzQ1MDhhNzBmYWM4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjExMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYxMTA0VDIxNTMwNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWYyOGE0Y2Q3ODRmNjY5NzM0YWIyNGNmMGMxZmY2ZTk2YzMxZWY3ZTU3MWM3OTE4ZjFkZWM1ODJmY2Q4YjNjYjMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.tOfXCFhYs5_1lmUODO_OfeDA4MVr4qxK26ziFNjvwXk" />
+
+| Componente               | Descrição                                                              |
+| ------------------------ | ---------------------------------------------------------------------- |
+| `python_chatbot_session` | Trace principal que representa a sessão completa do chatbot.           |
+| `chatbot_turn`           | Registra cada interação realizada pelo usuário.                        |
+| `python_qa_chain`        | Representa a cadeia de processamento da pergunta utilizando LangChain. |
+| `chat_prompt`            | Registra a etapa de construção do prompt enviado ao modelo.            |
+| `openai_generation`      | Monitora a chamada ao LLM e a geração da resposta.                     |
+
+Os eventos `chat_session_started`, `question_received`, `generation_completed`, `generation_failed` e `chat_session_ended` marcam o fluxo. O CLI aguarda até cinco segundos pelo envio de traces pendentes ao encerrar.
