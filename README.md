@@ -42,6 +42,9 @@ O modelo padrão é `gpt-6-luna`. Para selecionar outro modelo disponível na su
 python chatbot.py
 ```
 
+<video src="https://github.com/user-attachments/assets/c75bb6e8-aecd-43c5-a594-ee83bb8cd036" controls /> 
+
+
 Digite perguntas no terminal. Para encerrar, digite `/sair`, `sair`, `exit` ou `quit`.
 
 ## Exemplos de perguntas
