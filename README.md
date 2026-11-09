@@ -76,7 +76,7 @@ LANGSMITH_API_KEY=sua-chave-langsmith
 
 A imagem apresenta o rastreamento de uma sessão do chatbot, contendo três interações e suas respectivas etapas de execução.
 
-<img alt="Trace LangSmith" src="https://private-user-images.githubusercontent.com/53228013/695398875-4c2149c5-ca58-488c-9ebe-c4508a70fac8.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTM4Mjk0ODQsIm5iZiI6MTc5MzgyOTE4NCwicGF0aCI6Ii81MzIyODAxMy82OTUzOTg4NzUtNGMyMTQ5YzUtY2E1OC00ODhjLTllYmUtYzQ1MDhhNzBmYWM4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjExMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYxMTA0VDIxNTMwNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWYyOGE0Y2Q3ODRmNjY5NzM0YWIyNGNmMGMxZmY2ZTk2YzMxZWY3ZTU3MWM3OTE4ZjFkZWM1ODJmY2Q4YjNjYjMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRnBuZyJ9.tOfXCFhYs5_1lmUODO_OfeDA4MVr4qxK26ziFNjvwXk" />
+<img alt="Trace LangSmith" src="https://github.com/user-attachments/assets/e56d5380-837a-4881-9d15-389b30572227" />
 
 | Componente               | Descrição                                                              |
 | ------------------------ | ---------------------------------------------------------------------- |
