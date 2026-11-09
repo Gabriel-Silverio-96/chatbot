@@ -87,3 +87,6 @@ A imagem apresenta o rastreamento de uma sessão do chatbot, contendo três inte
 | `openai_generation`      | Monitora a chamada ao LLM e a geração da resposta.                     |
 
 Os eventos `chat_session_started`, `question_received`, `generation_completed`, `generation_failed` e `chat_session_ended` marcam o fluxo. O CLI aguarda até cinco segundos pelo envio de traces pendentes ao encerrar.
+
+<video src="https://github.com/user-attachments/assets/c75bb6e8-aecd-43c5-a594-ee83bb8cd036" controls>
+
